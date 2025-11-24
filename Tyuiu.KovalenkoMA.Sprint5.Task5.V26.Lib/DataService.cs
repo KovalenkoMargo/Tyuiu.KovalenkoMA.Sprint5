@@ -18,13 +18,16 @@ namespace Tyuiu.KovalenkoMA.Sprint5.Task5.V26.Lib
                     foreach (string numStr in numbers)
                     {
                         double x = double.Parse(numStr, CultureInfo.InvariantCulture);
-                        if (x >= 0)
+                        if (x % 1 != 0)
                         {
-                            resp += x;
-                        }
-                        else
-                        {
-                            reso += x;
+                            if (x >= 0)
+                            {
+                                resp += x;
+                            }
+                            else
+                            {
+                                reso += x;
+                            }
                         }
                     }
                 }
