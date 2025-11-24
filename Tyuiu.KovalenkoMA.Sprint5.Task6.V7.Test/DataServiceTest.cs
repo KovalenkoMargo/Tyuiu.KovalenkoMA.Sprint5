@@ -1,5 +1,5 @@
-﻿using Tyuiu.KovalenkoMA.Sprint5.Task5.V26.Lib;
-namespace Tyuiu.KovalenkoMA.Sprint5.Task5.V26.Test
+﻿using Tyuiu.KovalenkoMA.Sprint5.Task6.V7.Lib;
+namespace Tyuiu.KovalenkoMA.Sprint5.Task6.V7.Test
 {
     [TestClass]
     public sealed class DataServiceTest
@@ -7,7 +7,7 @@ namespace Tyuiu.KovalenkoMA.Sprint5.Task5.V26.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = $@"C:\DataSprint5\InPutDataFileTask5V26.txt";
+            string path = $@"C:\DataSprint5\InPutDataFileTask6V7.txt";
             FileInfo fileinto = new FileInfo(path);
             bool fileExists = fileinto.Exists;
             Assert.AreEqual(true, fileExists);
@@ -15,10 +15,10 @@ namespace Tyuiu.KovalenkoMA.Sprint5.Task5.V26.Test
         [TestMethod]
         public void TestMethod2()
         {
-            DataService ds=new DataService();
-            string path = $@"C:\DataSprint5\InPutDataFileTask5V26.txt";
-            
-            Assert.AreEqual(65.98,ds.LoadFromDataFile(path));
+            DataService ds = new DataService();
+            string path = $@"C:\DataSprint5\InPutDataFileTask6V7.txt";
+
+            Assert.AreEqual(16, ds.LoadFromDataFile(path));
         }
     }
 }
